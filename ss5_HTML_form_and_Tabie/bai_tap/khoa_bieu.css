@@ -1,0 +1,19 @@
+table {
+    width: 500px;
+   margin: 0 auto;
+}
+.redbackground {
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+ td {
+    padding: 5px;
+    text-align: left;
+}
+th {
+    background-color: yellow;
+    color: black;
+}
