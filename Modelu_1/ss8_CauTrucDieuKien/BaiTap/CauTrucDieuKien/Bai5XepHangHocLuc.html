@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h3 id ="string"></h3>
+<body>
+<script>
+    let a = parseInt(prompt("Nhâp điểm kiểm tra :"));
+    let b = parseInt(prompt("Nhập điểm giữa kỳ : "));
+    let c = parseInt(prompt("Nhâp điểm cuối kỳ : "));
+    let average = ((a + b + c)/3);
+if (average >= 8 ){
+    document.getElementById("string").innerText="Là học sinh giỏi";
+}else if (average >= 6.5){
+    document.getElementById("string").innerText="là học sinh khá";
+}else if (average >=5 ){
+    document.getElementById("string").innerText="là học sinh trung bình";
+}else {
+    document.getElementById("string").innerText = "là học sinh yếu";
+}
+</script>
+
+</body>
+</html>
