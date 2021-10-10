@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let fib_truoc = 1;
+  let fib_sau = 1;
+  while (true) {
+    let fib = fib_truoc + fib_sau;
+    if ( fib % 5 === 0 ) {
+          document.writeln("la so dau tien chia het cho 5 :" + fib );
+      //in ra man hinh so fibonaci đầu tiên chia hết cho 5 la fib
+      break;
+    }
+    fib_truoc = fib_sau;
+    fib_sau = fib;
+  }
+</script>
+
+</body>
+</html>

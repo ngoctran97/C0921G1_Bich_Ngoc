@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fib_truoc = 1;
+    let fib_sau = 1;
+    let tong = fib_truoc + fib_sau;
+
+    for(let i = 3; i <= 20; i++) {
+        let fib = fib_truoc + fib_sau;
+
+        tong += fib;
+
+        fib_truoc = fib_sau;
+        fib_sau = fib;
+    }
+document.writeln("tong cua 20 so dau tien trong day la :" + tong)
+
+    //in ra tong
+</script>
+
+</body>
+</html>

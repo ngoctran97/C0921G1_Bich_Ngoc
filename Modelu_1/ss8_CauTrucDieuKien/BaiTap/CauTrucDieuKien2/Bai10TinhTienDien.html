@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("so kWh da dung");
+    bac1 = ( a * 1484 );
+    bac2 = ((a-50)* 1533);
+    bac3 = ((a-100)* 1786);
+    bac4 = ((a-200)* 2242);
+    bac5 = ((a-300)* 2503);
+    bac6 = ((a-400)* 2587);
+    if ( a <= 50) {
+        alert("so tien dien thang nay la:" + bac1);
+    } else if ( a <= 100 ) {
+        alert ("so tien dien thang nay la:" + (bac1 + bac2));
+    }else if ( a<= 200 ) {
+        alert ("so tien dien thang nay la:" + (bac1 + bac2 + bac3));
+    }else if ( a<= 300 ) {
+        alert("so tien dien thang nay la:" + (bac1 + bac2 + bac3 + bac4));
+    }else if ( a<= 400 ) {
+        alert("so tien dien thang nay la:" + (bac1 + bac2 + bac3 + bac4 + bac5));
+    }else {
+        alert("so tien dien thang nay la:" + (bac1 + bac2 + bac3 + bac4 + bac5 + bac6));
+    }
+</script>
+
+</body>
+</html>
