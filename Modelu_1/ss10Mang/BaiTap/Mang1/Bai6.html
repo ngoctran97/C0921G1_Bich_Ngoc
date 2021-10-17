@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {padding-top: 50px}
+    </style>
+</head>
+<body>
+<input type="text" id="txtValue"/>
+<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
+<input type="button" id="btnDisplay" value="Display" onclick="display_array();"/>
+<input type="text" id="txtV"/>
+<input type="button" id="btnSearch" value="Search" onclick="search_array();"/>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+
+    function add_element_to_array() {
+        array[x] = document.getElementById("txtValue").value;
+        //alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("txtValue").value = "";
+    }
+    function display_array() {
+        let e = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+    function search_array() {
+        let V = document.getElementById("txtV").value;
+        let ketqua = false;
+        for (let i = 0; i < array.length; i++) {
+            if ( array[i] == V)
+                ketqua = true;
+        }
+        if (ketqua == true)
+            document.getElementById("result").innerHTML = "V is in the array";
+        else
+            document.getElementById("result").innerHTML = "V is not in the array";
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

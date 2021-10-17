@@ -14,16 +14,12 @@
   <p id="demo"></p>
   <p id="xiu"></p>
   <script>
-      //buoc 1
       let numbers = 20;
-      //Bước 2
-      let count = 0;//Đếm số lượng số nguyên tố đã in ra.
-      //Bước 3
+      let count = 0;
       let N = 2;
-      //Bước 4
       while(count < numbers)
       {
-          if(kiemTraSoNguyen(N) == true) {
+          if(kiemTraSoNguyen(N) === true) {
           document.getElementById("demo").innerHTML += " " + N;
           count++;
       }

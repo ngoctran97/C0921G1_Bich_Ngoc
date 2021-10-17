@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Từ Điển Anh - Việt</h2>
+<form>
+    <input type ="text"/>
+    <input type ="submit" value ="tìm kiếm"/>
+</form>
+<script>
+    $dictionnary = Array("hello"=>"xin chào", "tiger"=>"con hổ", "ribbit"=>"con thỏ", "buffalo"=>"con trâu");
+    if ($_SERVER["Request_METHOD"] == "POST") {
+        $searchword = $_POST["search"];
+        $flag = 0 ;
+        foreach($dictionary as $word => $description){
+            if($word == $searchword){
+                echo "Từ:" .$ửod. ".<br/>Nhĩa cua tứ:" . $description;{
+                    echo "<br/>";
+                    $flag = 1;
+                }
+
+            }
+        }
+        if($flag == 0){
+            echo "Không tomg thấy từ nào cần tra.";
+        }
+    }
+
+</script>
+
+</body>
+</html>

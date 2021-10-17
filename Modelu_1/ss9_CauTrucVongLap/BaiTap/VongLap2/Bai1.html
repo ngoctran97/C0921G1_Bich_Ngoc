@@ -8,21 +8,17 @@
 <script>
     let fib_truoc = 1;
     let fib_sau = 1;
-    let tong = fib_truoc + fib_sau;
-
+    document.writeln(fib_truoc , fib_sau);
     for(let i = 3; i <= 20; i++) {
         let fib = fib_truoc + fib_sau;
-
-        tong += fib;
-
+        document.writeln(fib);
         fib_truoc = fib_sau;
         fib_sau = fib;
     }
-alert( "tong : " + tong);
+
 
 
 
 </script>
-
 </body>
 </html>

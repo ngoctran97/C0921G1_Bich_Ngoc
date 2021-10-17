@@ -6,19 +6,15 @@
 </head>
 <body>
 <script>
-    let fib_truoc = 1;
-    let fib_sau = 1;
-    let fib = fib_truoc + fib_sau;
-    for(let i = 3; i <= 30; i++)
-        if ( fib % 7 === 0 )
-            for(let i = 3; i <= 30; i++) {
-                let fib = fib_truoc + fib_sau;
-
-                tong += fib;
-
-                fib_truoc = fib_sau;
-        fib_sau = fib;
+    let num = prompt("Enter your number: ");
+    let total = 0;
+    let i = 1;
+    for (; i <= num; i +=1) {
+        if(i%7==0)
+        total = total + i;
+        alert(total);
     }
+
 </script>
 
 </body>

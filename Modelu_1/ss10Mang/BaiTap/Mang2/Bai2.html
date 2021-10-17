@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lop = ["c", 0, 9, 2, 1, "g", 1];
+    let first = 0 ;
+    let last = lop.length -1;
+    while (first < last) {
+        let b = lop[first];
+        lop[first] = lop[last];
+        lop[last] = b;
+        first++;
+        last--;
+    }
+    document.write(lop)
+
+
+</script>
+
+</body>
+</html>

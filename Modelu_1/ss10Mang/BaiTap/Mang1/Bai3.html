@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let number = [1, 2, 3, 4, 5, 32, 33, 34, 35, 8];
+  let max = number[0];
+  let tong = number[0];
+
+  for( let i = 1; i < number.length; i++) {
+    tong += number[i];
+    if (number[i] > number[max])
+      max = i;
+  }
+    let average = tong/number.length;
+
+  document.write("so lon nhat la :" + number[max]);
+  document.write("trung binh la:"+ average);
+</script>
+
+</body>
+</html>
