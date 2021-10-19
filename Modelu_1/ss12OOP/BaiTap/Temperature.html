@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(nhietdo) {
+            this.nhietdo = nhietdo;
+        }
+        getNhietdo(nhietdo){
+            return this.nhietdo;
+        }
+        convertNhietdoToFahreheit(){
+            return (this.nhietdo*1.8)+32;
+        }
+        convertNhietdoToKelvin(){
+            return this.nhietdo+273.15;
+        }
+    }
+    let nhietdo = new Temperature(25);
+    let nhietdoDisplay = nhietdo.getNhietdo();
+    let fahrenheit = nhietdo.convertNhietdoToFahreheit();
+    let keluie = nhietdo.convertNhietdoToKelvin();
+    document.write("Do C =" + nhietdoDisplay + "<br>");
+    document.write("Do F =" + fahrenheit + "<br>");
+    document.write("Do K =" + keluie);
+</script>
+
+</body>
+</html>

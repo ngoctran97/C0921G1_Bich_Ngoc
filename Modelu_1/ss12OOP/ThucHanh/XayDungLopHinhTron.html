@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class circle{
+        constructor(radius) {
+            this.radius = radius;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        getArea(){
+            return Math.PI*this.radius*this.radius;
+        }
+    }
+
+    let inputCircle = new circle(2);
+    let radiusCircle = inputCircle.getRadius();
+    let areaCircle = inputCircle.getArea();
+    document.write('Bán kính: ' + radiusCircle +'<br>');
+    document.write('Diện tích: ' + areaCircle);
+</script>
+
+</body>
+</html>
