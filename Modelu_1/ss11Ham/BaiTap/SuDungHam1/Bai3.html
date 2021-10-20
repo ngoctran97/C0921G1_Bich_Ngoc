@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function kiemtra(so1,so2) {
+        if (so1 > so2) {
+            result = "Số thứ nhất lớn hơn số thứ 2";
+        } else {
+            let result = so1 + so2;
+            return result;
+        }
+    }
+    let so1 = parseFloat(prompt('Nhập số thứ 1:'));
+    let so2 = parseFloat(prompt('Nhập số thứ 2:'));
+    alert(kiemtra(so1,so2));
+
+</script>
+
 </body>
 </html>

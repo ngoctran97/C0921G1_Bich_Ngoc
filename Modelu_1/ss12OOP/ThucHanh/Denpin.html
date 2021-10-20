@@ -6,15 +6,69 @@
 </head>
 <body>
 <script>
-    class Battery{
-        constructor (energy){
+    class battery {
+        constructor(energy) {
             this.energy = energy;
         }
-        constructor() {
+
+        setEnergy(energy){
+            this.energy = energy;
+        }
+
+        getEnergy() {
             return this.energy;
         }
-        decrease
+
+        decreaseEnergy() {
+            if (this.energy > 0) {
+                this.energy--;
+            }
+        }
     }
+
+    class flashLamp{
+        constructor(battery,status) {
+            this.battery = battery;
+            this.status = status;
+        }
+        setBattery(){
+            this.battery = battery;
+        }
+        getBatteryInfo(){
+            return this.battery.getEnergy();
+        }
+        light(){
+            if(this.status){
+                alert("Lighting");
+            } else {
+                alert("Not Lighting");
+            }
+        }
+        turnOn(){
+            this.staus = true;
+        }
+        turnOff(){
+            this.status = false;
+        }
+    }
+
+    let batteryOri = new battery(20);
+    batteryOri.setEnergy(10);
+    batteryOri.decreaseEnergy();
+    let flashLampOri = new flashLamp(batteryOri);
+    // flashLampOri.setBattery(20);
+    document.write("Battery info:" + flashLampOri.getBatteryInfo() + "<br/>");
+    flashLampOri.light();
+    document.write("Turn on<br/>")
+    flashLampOri.turnOn();
+    flashLampOri.light();
+    document.write("Battery info:" + flashLampOri.getBatteryInfo() + "<br/>");
+
+    document.write("Turn off<br/>")
+    flashLampOri.turnOff();
+    flashLampOri.light();
+
+
 </script>
 
 </body>
