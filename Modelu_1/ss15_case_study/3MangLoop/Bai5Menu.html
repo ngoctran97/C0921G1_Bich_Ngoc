@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    confirm(
+        "Vui lòng lựa chọn theo số thứ tự thức uống: " +
+        "1. Cafe " +
+        "2. Cam vắt " +
+        "3. Nước ép cà rốt " +
+        "4. Nước ép cà chua " +
+        "5. Nước lọc " +
+        "6. Nước dừa " +
+        "7. Thoát gọi món");
+    let order;
+    let quantity;
+    let total;
+    let nums = [1, 2, 3, 4, 5, 6];
+    let price = ["10000", "25000", "20000", "20000", "15000", "30000"];
+    do {
+        order = parseInt(prompt("Nhập số thứ tự của món cần order. Số '7' để thoát gọi món"));
+        for (let i = 0; i < nums.length; i++) {
+            if (order === nums[i]) {
+                alert("Giá một đơn vị: " + price[i]);
+                total = price[i];
+            } else if (order === 7) {
+                break;
+            }
+        }
+        quantity = parseInt(prompt("Nhập số lượng"));
+    } while (!(parseInt(order) === order && parseInt(quantity) === quantity && order > 0 && order <= 7))
+    if (order === 7) {
+        document.writeln('Cảm ơn bạn! Hẹn bạn lần sau')
+    } else {
+        total *= quantity;
+        document.writeln("Số tiền cần trả là: " + total.toLocaleString() + " VND");
+    }
+
+
+
+</script>
+
+</body>
+</html>

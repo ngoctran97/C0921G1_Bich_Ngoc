@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = ["a","a","b","c","c","d"];
+    let s2 = ["a","d","c","a","a","c"];
+    let count = 0;
+    let commonSym = [];
+    for (let i=0; i<s1.length; i++){
+        for (let j=0; j<s2.length; j++){
+            if(s1[i] === s2[j]){
+                count++;
+                commonSym.push(s1[i]);
+                s2.splice(j,1);
+                break;
+            }
+        }
+    }
+    document.writeln("Hai chuỗi có " + count + " ký tự chung là: " + commonSym);
+</script>
+
+</body>
+</html>

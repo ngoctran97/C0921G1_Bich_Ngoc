@@ -6,6 +6,20 @@
 </head>
 <body>
 <script>
+    let str = prompt('Nhập chuỗi ký tự');
+    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+    for (let i=0; i<str.length; i++){
+        if (upper.indexOf(str[i]) !== -1){
+            result.push(str[i].toLocaleLowerCase())
+        } else if (lower.indexOf(str[i]) !== -1) {
+            result.push(str[i].toLocaleUpperCase())
+        } else {
+            result.push();
+        }
+    }
+    document.write(result.join(''));
 
 </script>
 

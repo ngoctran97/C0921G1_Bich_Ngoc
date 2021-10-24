@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("tiền lương tháng này là :" );
+    bac3 = ((a*20)/100) ;
+    bac2 = ((a*10)/100) ;
+    bac1 = ((a*5)/100) ;
+    if ( a <=7 ){
+        document.write("tiền thuế phải nộp:"+ bac1+"triệu");
+        document.write("tiền lương ròng: " + (a-bac1)+ "triệu");
+    }else if ( a <= 15){
+        document.write("tiền thuế phải nộp:"+ bac2+"triệu");
+        document.write("tiền lương ròng: " + (a-bac2)+ "triệu");
+    }else ( a > 15 )
+        document.write("tiền thuế phải nộp:"+ bac3+"triệu");
+        document.write("tiền lương ròng: " + (a-bac3)+ "triệu");
+
+</script>
+
+</body>
+</html>
