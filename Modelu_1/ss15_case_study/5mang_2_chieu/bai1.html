@@ -6,21 +6,41 @@
 </head>
 <body>
 <script>
+   // let n = prompt("n la so hang");
+   // let m = prompt("n la so cot");
+    //let numbers = [];
+    //let sum = 0;
 
-    let n = prompt("n la so hang");
-    let m = prompt("m laf so cot");
-    let mang = n*m;
-    let tong = 0;
-    for (let i = 0; i < n.length;i++) {
-        for ( let j = 0; j < m.length; i++){
-            if( mang[i][j]%2==0){
-                tong += mang[i][j];
-            }
+    // Lặp theo hàng
+    //for (let i = 0; i < number.length; i++){
+      //  numbers[i] = [];
+        // Lặp theo cột, số cộ từ 0 -> số lượng phần tử của hàng i
+        //for (let j = 0; j < number[i].length; j++){
+          //  if (number[i][j]%2== 0){
+            //    tong += number[i][j];
+            //}
+        //}
+        //document.write(tong);
+//    }
 
-        }
-
-        result(tong);
-    }
+  //  console.log(numbers);
+   function number(arr){
+       let sum = 0;
+       for ( let i = 0; i < arr.length; i++){
+           for (let j = 0; j < arr[i].length; j++){
+               if ( arr[i][j]%2 === 0){
+                   sum += arr[i][j];
+               }
+           }
+       }
+       return sum;
+   }
+   let arr = [
+       [3,5,6,0,3,1,1,7,9],
+       [8,6,5,4,7,6,4,0,8]
+   ];
+   let result = number(arr);
+   document.write("tong cac so chan trong han la:"+result);
 
 
 </script>

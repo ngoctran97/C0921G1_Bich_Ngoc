@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNum;
+    do {
+        inputNum = parseInt(prompt("Nhập số cần chuyển đổi"));
+    } while (!(inputNum>0 && parseInt(inputNum) === inputNum));
+    let inputNumStr = inputNum.toString();
+    let result = "";
+    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let texts = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+    for (let i = 0; i < inputNumStr.toString().length; i++) {
+        for (let j = 0; j < numbers.length; j++) {
+            if (inputNumStr[i] == numbers[j]) {
+                result += texts[j] + " ";
+            }
+        }
+    }
+    document.writeln("Dãy số chuyển sang chữ là: " + result);
+
+</script>
+
+</body>
+</html>

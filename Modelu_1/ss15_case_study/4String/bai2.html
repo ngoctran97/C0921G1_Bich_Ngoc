@@ -6,14 +6,21 @@
 </head>
 <body>
 <script>
-   let kytu = ["a","a","a","s","d","d","e"];
-   let dem = 0;
+   let kytu = "asdfdgh";
+   let newkytu = [];
    for (let i =0; i < kytu.length; i++) {
-       if (kytu[i] !== kytu[i + 1]) {
-           dem++;
-
+       let timthay = false;
+       for ( let j = 0; j < newkytu.length; j++){
+           if (newkytu[j] === kytu[i]){
+               timthay = true;
+               break;
+           }
+       }
+       if ( timthay == false){
+           newkytu.push(kytu[i]);
+       }
    }
-result(dem);
+   document.write(newkytu.length);
 
 </script>
 

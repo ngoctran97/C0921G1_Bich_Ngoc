@@ -6,23 +6,12 @@
 </head>
 <body>
 <script>
-    let inputNum;
-    do {
-        inputNum = parseInt(prompt("Nhập số cần chuyển đổi"));
-    } while (!(inputNum>0 && parseInt(inputNum) === inputNum));
-    let inputNumStr = inputNum.toString();
-    let result = "";
-    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    let texts = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
-    for (let i = 0; i < inputNumStr.toString().length; i++) {
-        for (let j = 0; j < numbers.length; j++) {
-            if (inputNumStr[i] == numbers[j]) {
-                result += texts[j] + " ";
-            }
-        }
+    let number;
+    let so = [0,1,2,3,4,5,6,7,8,9];
+    let chu = ["không","môt","hai","ba","bốn","năm","sáu","bảy","tám","chín"];
+    do{
+        number = parseInt(prompt("so nhap vao"));
     }
-    document.writeln("Dãy số chuyển sang chữ là: " + result);
-
 </script>
 
 </body>

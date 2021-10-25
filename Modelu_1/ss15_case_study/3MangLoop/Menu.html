@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form action="/action_page.php">
+        Menu:<br/>
+        <label><input name="hobby" value="travel" type="radio" checked/> 1.cafe</label> <br/>
+        <label><input name="hobby" value="sport" type="radio"/> 2.cam văt</label> <br/>
+        <label><input name="hobby" value="cooking" type="radio"/> 3.nước ép catro</label> <br/>
+        <label><input name="hobby" value="cooking" type="radio"/> 4. nước lọc</label> <br/>
+        <label><input name="hobby" value="cooking" type="radio"/> 5. canh dây</label> <br/>
+        <label><input name="hobby" value="cooking" type="radio"/> 6. bí đao</label> <br/>
+        <input type="submit" value="Send data"/>
+
+    </form>
+<script>
+    let tien = [10000,10000,15000,15000,20000,2000];
+    let oder = ["cafe","cam vắt","nước ép catro","nước lọc","chanh dây","bí đao"];
+    let soLuong = 0;
+    let thanhTien = 0;
+    let tong =0;
+    let menu;
+    do {
+        menu = parseInt(prompt("món cần oder"+"1.cafe"+"2.cam vắt"+"3.nước ép catro"+"4.nước lọc"+"5.Canh dây"+"6.Bí đao"));
+        if (  menu<= 6 && menu >= 1 ){
+            alert(oder[menu-1]+"gia tien:"+tien[menu-1]);
+            soLuong = prompt("nhap so luong");
+            thanhTien =soLuong*tien[menu-1];
+            alert("tong thanh toans la:"+ thanhTien);
+            tong += thanhTien;
+        }
+    }while (menu !== 7);
+
+    document.write("tong:"+tong);
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

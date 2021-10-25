@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcaa";
+    let news =[];
+    let dem = 0;
+    for (let i = 0; i < s1.length; i++){
+        let index = s2.indexOf(s1[i]);
+        if (index != -1){
+            dem++;
+            s2 = s2.substr(0,index)+s2.substr(index + 1,s2.length);
+        }
+    }
+document.write(dem);
+</script>
+
+
+</body>
+</html>
